@@ -39,15 +39,8 @@ export default{
                 if(this.currentValue === null){
                     this.currentValue = Number(value);
                 } else{
-                    if (value === '.'){
-                    console.log(value)
-                    if (!this.currentValue.includes('.')){
-                    this.currentValue += value;
-                    this.dataEmited = this.currentValue
-
-                }
-                }
                     this.currentValue = this.currentValue * 10 + Number(value)
+                    
                 }
                 this.lastItem = "number"
             } else if(/[+\-*/]/.test(value)){
