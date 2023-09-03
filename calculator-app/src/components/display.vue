@@ -1,24 +1,14 @@
 <template>
     <div class="display">
-        {{ value }}
+     {{ result }} {{ number}} 
+       
     </div>
 </template>
 
 <script>
 export default{
-    props: ['value'],
+    props: ['result', 'number', 'operator'],
 
-
-    data(){
-        dataChecked: null
-    },
-
-
-    methods:{
-        valueValidation(){
-            this.value
-        }
-    }
 }
 
 </script>

@@ -3,7 +3,7 @@
    <button @click="handleButtonClick('7')">7</button>
    <button @click="handleButtonClick('8')">8</button>
    <button @click="handleButtonClick('9')">9</button>
-   <button @click="handleButtonClick('Del')">Del</button>
+   <button @click="handleButtonClick('del')">Del</button>
    <button @click="handleButtonClick('4')">4</button>
    <button @click="handleButtonClick('5')">5</button>
     <button @click="handleButtonClick('6')">6</button>
@@ -15,7 +15,7 @@
     <button @click="handleButtonClick('.')">.</button>
     <button @click="handleButtonClick('0')">0</button>
     <button @click="handleButtonClick('/')">/</button>
-    <button @click="handleButtonClick('x')">x</button>
+    <button @click="handleButtonClick('*')">x</button>
     <button class="reset" @click="handleButtonClick('reset')">RESET</button>
     <button class="result" @click="handleButtonClick('=')">=</button>
 </div>    
