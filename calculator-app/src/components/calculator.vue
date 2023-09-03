@@ -2,7 +2,9 @@
     <main>
         <div class="header">
             <h2>Calc</h2>
-            <button>Theme</button>
+            <themeSwitcher>
+                
+            </themeSwitcher>
         </div>
 
         <display class="display" :result="dataEmited" :number="currentValue" :operator="operator">
@@ -18,11 +20,13 @@
 <script>
 import display from './display.vue'
 import keyboard from './keyboard.vue'
+import themeSwitcher from './themeSwitcher.vue'
 
 export default{
     components:{
         display,
-        keyboard
+        keyboard,
+        themeSwitcher
     },
     data(){
         return{
