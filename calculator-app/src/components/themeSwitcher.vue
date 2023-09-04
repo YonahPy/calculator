@@ -20,30 +20,34 @@ export default{
 
     data(){
         return{
+            theme1: false,
             initialState: true,
-            theme1: true,
             theme2:false,
             theme3:false
         }
     },
     methods:{
       toggleAnimation() {
-        if (this.theme1) {
-          this.theme1 = false;
+        if (this.initialState) {
+          this.initialState = false;
           this.theme2 = true;
           this.theme3 = false;
+          this.theme1 = false
           
         } else if (this.theme2) {
-          this.theme1 = false;
+          this.initialState = false;
           this.theme2 = false;
           this.theme3 = true;
+          this.theme1 = false
           
         } else if (this.theme3) {
-          this.theme1 = true;
+          this.initialState = true
+          this.theme1 = true
           this.theme2 = false;
           this.theme3 = false;
           
         }
+        console.log(this.theme1, this.theme2, this.theme3)
       }
     }}
 
@@ -82,14 +86,14 @@ export default{
 }
 
 .theme-two{
-  animation: themeTwo 1s ease-in-out forwards;
+  animation: themeTwo 1s ease-out forwards;
 }
 .theme-three{
-  animation: themeThree 1s ease-in-out forwards;
+  animation: themeThree 1s ease-out forwards;
 }
 .theme-one{
-  animation: initialState;
-  animation: themeOne 1s ease-in-out;
+  
+  animation: themeOne 1s ease-out;
 }
 
 
@@ -98,11 +102,7 @@ p{
     margin-right: 10px;
 }
 
-@keyframes initialState{
-  to{
-    transform: translateX(0%);
-  }
-}
+
 
 @keyframes themeTwo{
   0%{
