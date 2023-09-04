@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container theme-one theme-two theme-three">
         <div class="numbers">
             <span>1</span>
             <span>2</span>
@@ -28,6 +28,7 @@ export default{
     },
     methods:{
       toggleAnimation() {
+        this.$emit('state', this.initialState, this.theme1, this.theme2, this.theme3)
         if (this.initialState) {
           this.initialState = false;
           this.theme2 = true;
@@ -47,7 +48,7 @@ export default{
           this.theme3 = false;
           
         }
-        console.log(this.theme1, this.theme2, this.theme3)
+        
       }
     }}
 
@@ -77,23 +78,25 @@ export default{
 
 }
 .circle{
-    background-color: hsl(6, 63%, 50%);
     width: 30%;
     height: 20px;
     border-radius: 50%;
     margin-left: 5px;
+    background-color: hsl(6, 63%, 50%);
     
 }
 
 .theme-two{
   animation: themeTwo 1s ease-out forwards;
+  
 }
 .theme-three{
   animation: themeThree 1s ease-out forwards;
+  
 }
 .theme-one{
-  
   animation: themeOne 1s ease-out;
+  
 }
 
 

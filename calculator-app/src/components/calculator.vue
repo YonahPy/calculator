@@ -1,12 +1,6 @@
 <template>
     <main>
-        <div class="header">
-            <h2>Calc</h2>
-            <themeSwitcher>
-                
-            </themeSwitcher>
-        </div>
-
+        
         <display class="display" :result="dataEmited" :number="currentValue" :operator="operator">
 
         </display>
@@ -117,14 +111,7 @@ export default{
     box-sizing: border-box;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
+
 
 .header, .display, .keyboard{
     background-color:hsl(224, 36%, 15%) ;
@@ -132,13 +119,7 @@ main{
     margin-bottom: 30px;
 
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: transparent;
-}
+
 
 
 

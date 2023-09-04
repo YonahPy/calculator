@@ -46,7 +46,7 @@ The designs were created to the following widths:
 - Dark moderate cyan (key background): hsl(185, 42%, 37%)
 - Very dark cyan (key shadow): hsl(185, 58%, 25%)
 
-- Orange (key background, toggle): hsl(25, 98%, 40%)
+- Orange (key background, toggle): c
 - Dark orange (key shadow): hsl(25, 99%, 27%)
 
 - Light grayish yellow (key background): hsl(45, 7%, 89%)
