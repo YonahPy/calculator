@@ -1,5 +1,5 @@
 <template>
-    <div class="display">
+    <div class="display" :class="themes">
      {{ result }} {{ number}} 
        
     </div>
@@ -7,7 +7,7 @@
 
 <script>
 export default{
-    props: ['result', 'number', 'operator'],
+    props: ['result', 'number', 'operator', 'themes'],
 
 }
 
@@ -15,12 +15,13 @@ export default{
 
 
 
-<style scoped>
+<style >
     .display{
         padding: 25px;
         border-radius: 10px;
         font-size: 32px;
-
     }
+    
+    
 
 </style>

@@ -1,12 +1,12 @@
 <template>
-    <div class="container theme-one theme-two theme-three">
+    <div class="container">
         <div class="numbers">
             <span>1</span>
             <span>2</span>
             <span>3</span>
         </div>
         <div class="button-themes">
-            <span class="circle" @click="toggleAnimation" :class="{'theme-one': theme1, 'theme-two': theme2, 'theme-three': theme3}" id="circle">
+            <span class="circle" @click="toggleAnimation" :class="{'animation-one': theme1,'theme-two': theme2, 'theme-three': theme3, 'animation-two': theme2, 'animation-three': theme3}" id="circle">
                
             </span>
         </div>
@@ -28,7 +28,7 @@ export default{
     },
     methods:{
       toggleAnimation() {
-        this.$emit('state', this.initialState, this.theme1, this.theme2, this.theme3)
+        
         if (this.initialState) {
           this.initialState = false;
           this.theme2 = true;
@@ -48,7 +48,13 @@ export default{
           this.theme3 = false;
           
         }
+        this.$emit('themeChange', this.getCurrentTheme())
         
+        
+      },
+      getCurrentTheme(){
+        if (this.theme2) return 'theme-two';
+        if (this.theme3) return 'theme-three';
       }
     }}
 
@@ -68,7 +74,7 @@ export default{
     margin-bottom: 3px;
 }
 .button-themes{
-    background-color: hsl(224, 36%, 15%);
+    
     width: 100%;
     height: 30px;
     border-radius: 50px;
@@ -82,20 +88,23 @@ export default{
     height: 20px;
     border-radius: 50%;
     margin-left: 5px;
-    background-color: hsl(6, 63%, 50%);
+    
     
 }
 
-.theme-two{
+.animation-two{
   animation: themeTwo 1s ease-out forwards;
   
-}
-.theme-three{
-  animation: themeThree 1s ease-out forwards;
   
 }
-.theme-one{
+.animation-three{
+  animation: themeThree 1s ease-out forwards;
+  
+  
+}
+.animation-one{
   animation: themeOne 1s ease-out;
+  
   
 }
 

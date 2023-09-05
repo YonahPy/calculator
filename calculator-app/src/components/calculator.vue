@@ -1,7 +1,7 @@
 <template>
     <main>
         
-        <display class="display" :result="dataEmited" :number="currentValue" :operator="operator">
+        <display class="display" :result="dataEmited" :number="currentValue" :operator="operator" :class="themeSelected">
 
         </display>
 
@@ -22,13 +22,16 @@ export default{
         keyboard,
         themeSwitcher
     },
+    props:{
+        themes: String
+    },
     data(){
         return{
             dataEmited: null,
             currentValue: null,
             operator: null,
-            lastItem: null
-            
+            lastItem: null,
+            themeSelected: this.themes
         }
     },
     methods:{
@@ -114,7 +117,7 @@ export default{
 
 
 .header, .display, .keyboard{
-    background-color:hsl(224, 36%, 15%) ;
+    
     width: 50vw;
     margin-bottom: 30px;
 
